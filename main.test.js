@@ -115,8 +115,8 @@ describe('isComplete', () => {
   })
 })
 
-describe('isHighPriority', () => {
-  it(`returns whether the given todo is of high priority`, () => {
+xdescribe('isHighPriority', () => {
+  xit(`returns whether the given todo is of high priority`, () => {
     const todo1 = {
     text: 'Christmas shopping',
 

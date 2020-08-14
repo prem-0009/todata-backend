@@ -2,12 +2,14 @@
  * HELPER FUNCTIONS *
  ********************/
 
+const getTodoName = function(todo){
+  return todo.text
+}
 
+const getPriority = (todo) => todo.priority ;
 
-
-
-
-
+// const isComplete
+const isComplete = (todo) => todo.complete;
 
 
 
@@ -15,10 +17,30 @@
  * ITERATION FUNCTIONS *
  ***********************/
 
+const names = (todos) => todos.map(getTodoName);
 
 
+const priorities = (todos) => todos.map((todos) => todos.priority)
 
 
+//name and priorities
+const namesAndPriorities = 
+(todos) => 
+todos.map((todos) =>
+todos.priority > 1 ? 
+`${todos.text} - High` : `${todos.text} - Low`)
+
+//just not complete
+const justNotComplete = (todos) =>todos.filter((todos) => todos.complete === false );
+
+//just complete
+const justComplete = (todos) => todos.filter((todos) => todos.complete === true)
+
+//priority 2 Only
+const priority2Only = (todos) => todos.filter((todos) => todos.priority === 2)
+
+//priority 1 only
+const priority1Only = (todos) => todos.filter((todos) => todos.priority === 1)
 
 
 
